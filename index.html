@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./assets/images/favicon-32x32.png" sizes="32x32" />
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="./styles.css" />
+</head>
+
+  <body>
+    <!-- Toast untuk menampilkan pesan setelah pengiriman formulir -->
+    <div class="toast hidden">
+        <img src="./assets/images/icon-success-check.svg" alt="toast check" />
+        <p>Message Sent! Thanks for completing the form. We'll be in touch soon!</p>
+    </div>
+    
+    <!-- Kontainer untuk formulir kontak -->
+    <div class="form-container">
+        <h1>Contact Us</h1>
+        <!-- Formulir untuk mengumpulkan data pengguna -->
+        <form class="form">
+            <!-- inputan nama depan -->
+            <div class="name-inputs">
+              <div class="form-group">
+                <label for="">First Name <span class="star">*</span></label>
+                <input type="text" id="first-name" aria-required="true" />
+                <span class="error hidden">This field is required</span>
+              </div>
+              <!-- inputan nama belakang -->
+              <div class="form-group">
+                <label for="">Last Name <span class="star">*</span></label>
+                <input type="text" id="last-name" aria-required="true" />
+                <span class="error hidden">This field is required</span>
+              </div>
+            </div>
+            
+            <!-- Grup input untuk alamat email -->
+            <div class="form-group">
+                <label for="email">Email Address <span class="star">*</span></label>
+                <input type="email" id="email" required />
+                <span class="error hidden">Please enter a valid email address</span>
+            </div>
+            <!-- Grup input untuk jenis pertanyaan -->
+            <div class="form-group">
+                <label>Query Type <span class="star">*</span></label>
+                <div>
+                    <label><input type="radio" name="query-type" required /> General Enquiry</label>
+                    <label><input type="radio" name="query-type" required /> Support Request</label>
+                </div>
+                <span class="error hidden">Please select a query type</span>
+            </div>
+            <!-- Grup input untuk pesan -->
+            <div class="form-group">
+              <label for="message">Message <span class="star">*</span></label>
+              <textarea id="message" rows="4" required></textarea>
+              <span class="error hidden">This field is required</span>
+          </div>
+          <!-- Grup input untuk persetujuan kontak -->
+          <div class="form-group">
+              <label><input type="checkbox" id="consent" required /> I consent to being contacted by the team <span class="star">*</span></label>
+              <span class="error hidden">To submit this form, please consent to being contacted</span>
+          </div>
+          <!-- Tombol untuk mengirimkan formulir -->
+          <button type="submit">Submit</button>
+      </form>
+  </div>
+  
+  <!-- Menyertakan file JavaScript untuk logika formulir -->
+  <script src="./index.js"></script>
+</body>
+</html>
